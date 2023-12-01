@@ -11,6 +11,7 @@ export const RegisterForm = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
+    
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("handleSubmit")
@@ -42,27 +43,51 @@ export const RegisterForm = () => {
                     <form id="reg-form">
                         <div>
                             <label htmlFor="firstName">Name</label>
-                            <input type="text" id="firstName" value={firstName} name="firstName" onChange={handleFirstName} />
+                            <input 
+                            type="text" 
+                            id="firstName" 
+                            value={firstName} 
+                            name="firstName" 
+                            onChange={handleFirstName} />
                         </div>
                         <div>
                             <label htmlFor="email">Email</label>
-                            <input type="text" value={email} onChange={handleEmail} name={email} />
+                            <input 
+                            type="text" 
+                            value={email} 
+                            onChange={handleEmail} 
+                            name={email} />
                         </div>
                         <div>
                             <label htmlFor="username">Username</label>
-                            <input type="text" value={username} onChange={handleUsername} name="username" />
+                            <input 
+                            type="text" 
+                            value={username} 
+                            onChange={handleUsername} 
+                            name="username" />
                         </div>
                         <div>
                             <label htmlFor="password">Password</label>
-                            <input type="password" value={password} onChange={handlePassword} name="password" />
+                            <input 
+                            type="password" 
+                            value={password} 
+                            onChange={handlePassword} 
+                            name="password" />
                         </div>
                         <div>
                             <label htmlFor="password-again">Password Again</label>
-                            <input type="password" value={repeatPassword} onChange={handleRepeatPassword} name="repeatPassword" />
+                            <input 
+                            type="password" 
+                            value={repeatPassword} 
+                            onChange={handleRepeatPassword} 
+                            name="repeatPassword" />
                         </div>
                         <div>
                             <label></label>
-                            <input type="submit" className="button" onClick={handleSubmit} />
+                            <input 
+                            type="submit" 
+                            className="button" 
+                            onClick={handleSubmit} />
                         </div>
                     </form>
 

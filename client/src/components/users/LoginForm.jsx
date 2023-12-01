@@ -3,7 +3,7 @@ import { RegisterCss } from "./RegisterCss"
 export const LoginForm = () => {
     return (
 
-        <div class="main">
+        <div className="main">
             <RegisterCss />
             <div className="one">
                 <div className="register">
