@@ -6,20 +6,23 @@ import Users from "./components/Users"
 import Login from './components/Login'
 import { Logout } from './components/Logout'
 import { Register } from './components/Register'
+
+
 function App() {
 
 
   return (
     <>
-    <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path='/'         element={<Home />} />
-          <Route path='/Users'    element={<Users />} />
-          <Route path='/login'    element={<Login />} />
-          <Route path='/logout'   element={<Logout />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/Users' element={<Users />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={<Logout />} />
           <Route path='/register' element={<Register />} />
+
         </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
     </>
   )
 }
