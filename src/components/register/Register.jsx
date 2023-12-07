@@ -1,7 +1,9 @@
 import { useState } from "react"
 
-import NavBar from "./NavBar"
-import { register as userRegister } from '../service/users'
+import NavBar from "../NavBar"
+import { register as userRegister } from '../../service/users'
+import './form.css'
+
 
 export const Register = () => {
     const [username, setUsername] = useState('')
@@ -16,7 +18,7 @@ export const Register = () => {
 
         const users = userRegister({ username, email, password, repeatPassword })
         // setUsername('');setEmail('');setPassword('');setRepeatPassword('')
-        
+
     }
 
 
@@ -32,6 +34,13 @@ export const Register = () => {
     function repeatPasswordHandler(e) {
         setRepeatPassword(e.target.value)
     }
+    const blur = () => {
+        return
+        [
+            { max: 5, msg: "max 5 simbols" },
+            { min: 2, msg: "min 2 simbols" }
+        ]
+    }
 
     return (
         <div>
@@ -42,7 +51,8 @@ export const Register = () => {
                 Email:
                 <input type="text" name="email" onChange={emailHandler} value={email} />
                 Password:
-                <input type="password" name="password" onChange={passwordHandler} value={password} />
+                <input type="password" name="password" onChange={passwordHandler} 
+                value={password} minLength={3} maxLength={10} />
                 RepeatPassword:
                 <input type="repeatPassword" name="repeatPassword" onChange={repeatPasswordHandler} value={repeatPassword} />
                 <p>

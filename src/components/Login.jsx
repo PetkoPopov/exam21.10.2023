@@ -6,25 +6,25 @@ const Login = () => {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [email,setEmail] =useState('')
     const [allUsers, setAllUsers] = useState([])
     useEffect(
         () => {
-            fetch('http://localhost:3030/jsonstore/users')
+            fetch('http://localhost:3030/data/users')
                 .then(res => res.json())
                 .then(data => setAllUsers(data))
-        
-            }, []
+                .catch(() => { })
+        }, []
     )
 
-    const  submitHandler= async(event)=> {
+    const submitHandler = async (event) => {
         event.preventDefault()
-        const ourUser = await userLogin({ username, password })
-        console.log(ourUser);
+        userLogin({ username,email, password })
     }
 
     function usernameHandler(e) { setUsername(e.target.value) }
     function passwordHandler(e) { setPassword(e.target.value) }
-
+    const emailHandler=(e)=>     {setEmail(e.target.value)}
     return (
         <div>
             <NavBar />
@@ -32,9 +32,11 @@ const Login = () => {
             <h4>LOGIN</h4>
             <form onSubmit={submitHandler}>
                 Username:
-                <input type="text" className="" name="userName" value={username} onChange={usernameHandler} />
+                <input type="text" name="userName" value={username} onChange={usernameHandler} />
+                Email
+                <input type="text" name="email" value={email} onChange={emailHandler} />
                 Password
-                <input type="password" className="" name="password" value={password} onChange={passwordHandler} />
+                <input type="password"  name="password" value={password} onChange={passwordHandler} />
                 <p>
                     <input type="submit" />
                 </p>
