@@ -15,13 +15,13 @@ export const register = async ( /*{username, email, password, repeatPassword }*/
 }
 
 export const login = async (userData) => {
-     
-    const user =  await fetch('http://localhost:3030/data/users/login', {
+
+    const token = localStorage.getItem('accessToken');
+
+     await fetch('http://localhost:3030/data/users/login', {
         method:"POST",
         body:JSON.stringify(userData),
-        
-    } )
-
-    console.log(user);
-   
+        'X-Authorization': token
+        }).then(u=>console.log(u.email))       
 }
+

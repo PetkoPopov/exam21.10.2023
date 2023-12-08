@@ -1,8 +1,8 @@
 import { useState } from "react"
-
+import { useNavigate } from "react-router-dom"
 import NavBar from "../NavBar"
 import { register as userRegister } from '../../service/users'
-import './form.css'
+
 
 
 export const Register = () => {
@@ -10,15 +10,15 @@ export const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
-
+    const nav = useNavigate()
     function submitHandler(e) {
 
         e.preventDefault()
         // console.log(username , email ,password ,repeatPassword);
 
-        const users = userRegister({ username, email, password, repeatPassword })
-        // setUsername('');setEmail('');setPassword('');setRepeatPassword('')
-
+         userRegister({ username, email, password, repeatPassword })
+        setUsername('');setEmail('');setPassword('');setRepeatPassword('')
+        nav('/login') 
     }
 
 
