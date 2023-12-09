@@ -12,6 +12,11 @@ const colors = {
     10: 'chartreuse',
     11: 'cadetblue',
     12: 'orange',
-    13: 'grey'
+    13: 'grey',
+    14: '#12ab55', 
+    15: '#555555',
+    16: '#32FF00',
+    17: '#abcabc',
+    18: '#005500'
 }
 export default colors

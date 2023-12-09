@@ -7,7 +7,8 @@ export const Td = (prop) => {
                 prop.col.map(e => {
                     return (
                         <td>
-                            <Button key={e.val} e={e} />
+                            {/* {prop.reset && <Button  key={e.val} e={e}/>} */}
+                            <Button key={e.val} e={e} reset={prop.reset}/>
                         </td>
                     )
                 })
