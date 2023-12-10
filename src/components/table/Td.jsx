@@ -6,6 +6,7 @@ export const Td = ({ btnObj, arr}) => {
     useEffect(() => {
         console.log('test UseEffect () from Td  !');
         setAllowClick(arr, true)
+        
     })
 
     return (
@@ -17,7 +18,7 @@ export const Td = ({ btnObj, arr}) => {
                         
                         return (
                             
-                                <Button key={btn.keyIndex} e={btn} arr={arr}/>
+                        <Button key={btn.keyIndex} e={btn} arr={arr} index={btn.keyIndex}/>
                             
                         )
                     })

@@ -15,6 +15,7 @@ export const Table = () => {
         console.log('useEffect() from TAbLE !');
         let arrShuffle= shuffleArr(Math.floor(number.number*number.number)/2)
         arrBtn = createTr(number.number,arrShuffle)
+        
         setArr(arrBtn)
         setReset(false)
     }, [reset])

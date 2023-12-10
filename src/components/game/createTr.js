@@ -21,7 +21,8 @@ const createTr = (num,shuffleArr) => {
                 color: color,
                 number: number,
                 allowClick:true,
-                numberClicks: 0
+                numberClicks: 0,
+                isClicked:false
             }
         }
 

@@ -1,4 +1,5 @@
-function  setAllowClick(arr,cond){
+/** forbid all buttuns to push */
+function setAllowClick(arr, cond) {
 
     arr.forEach(element => {
         // console.log(element);
