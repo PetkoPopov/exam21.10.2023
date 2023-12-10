@@ -4,6 +4,7 @@ import './table.css'
 import { useState, useEffect } from "react"
 import createTr from '../game/createTr.js'
 import { v4 } from 'uuid'
+import shuffleArr from "../game/shuffleArr.js"
 export const Table = () => {
     const [reset, setReset] = useState(false)
     const [arr, setArr] = useState([])
@@ -12,7 +13,8 @@ export const Table = () => {
     var arrBtn = []
     useEffect(() => {
         console.log('useEffect() from TAbLE !');
-        arrBtn = createTr(number.number)
+        let arrShuffle= shuffleArr(Math.floor(number.number*number.number)/2)
+        arrBtn = createTr(number.number,arrShuffle)
         setArr(arrBtn)
         setReset(false)
     }, [reset])

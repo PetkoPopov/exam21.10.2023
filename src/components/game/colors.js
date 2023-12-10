@@ -13,10 +13,17 @@ const colors = {
     11: 'cadetblue',
     12: 'orange',
     13: 'grey',
-    14: '#12ab55', 
+    14: '#12ab55',
     15: '#555555',
     16: '#32FF00',
     17: '#abcabc',
-    18: '#005500'
+    18: '#005500',
+    19: "#6565AA",
+    20: "#33aa33",
+    21: "#AA99BB",
+    22: "aquamarine",
+    23: "olivegreen",
+    24: "darkyellow",
+    25: "purple"
 }
 export default colors
