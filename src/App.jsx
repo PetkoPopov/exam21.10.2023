@@ -6,7 +6,6 @@ import Login from './components/Login'
 import { Logout } from './components/Logout'
 import { Register } from './components/register/Register'
 import { PlayGame } from './components/game/PlayGame'
-import { Game } from './components/game/Game'
 import { Table } from './components/table/Table'
 function App() {
 

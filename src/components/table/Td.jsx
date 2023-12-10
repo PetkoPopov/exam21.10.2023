@@ -1,18 +1,23 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./Button"
-export const Td = (prop) => {
+export const Td = ({ btnObj, reset ,arr}) => {
+    //    console.log(btnObj);//trObj
+
     return (
         <>
-            {
-                prop.col.map(e => {
-                    return (
-                        <td>
-                            {/* {prop.reset && <Button  key={e.val} e={e}/>} */}
-                            <Button key={e.val} e={e} reset={prop.reset}/>
-                        </td>
-                    )
-                })
-            }
+            <tr>
+
+                {
+                    btnObj.map((btn)=> {// {trObj:{}}
+                        
+                        return (
+                            
+                                <Button key={btn.keyIndex} e={btn} reset={reset} arr={arr}/>
+                            
+                        )
+                    })
+                }
+            </tr>
         </>
 
     )
