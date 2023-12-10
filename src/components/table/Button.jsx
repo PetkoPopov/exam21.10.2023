@@ -1,24 +1,29 @@
 import { useEffect, useRef, useState } from "react"
 import setNumberClicks from "../game/calcClicks.js"
-export const Button = ({ e, reset, arr }) => {
+import { useNavigate } from "react-router-dom"
+import { Tr } from "./Tr.jsx"
+
+export const Button = ({ e, arr }) => {
 
     const [color, setColor] = useState('')
-    // const [clickCounter, setClickCounter] = useState(0)
-    const [hideColor, setHideColor] = useState(0)
-    const resetColor = useRef('')
-
-    useEffect(() => {
-        // if (reset) setClickCounter(0)
-        resetColor.current = e.color
-        setColor('')
-    }, [reset, hideColor])
-    // setNumberClicks(arr , clickCounter)
-
+    const nav = useNavigate()
+    
+    // console.log(arr[0].keyIndex)
+    // console.log(arr[2].trObj[1].keyIndex);
+    // console.log(arr[3].trObj[2].keyIndex);
     function btnHandler() {
-        // setClickCounter(() => clickCounter + 1)
+
         let hlp = setNumberClicks(arr)
-        // console.log(hlp);
         setColor(e.color)
+        // console.log(arr[0].keyIndex);
+        if (hlp % 3 == 0 && hlp != 0) {
+            console.log(`form button handler ${hlp}`);
+            let l = arr.length
+            nav(`/table/${l}`)
+            // return (<>{ <Tr arr={arr} key={1} /> }</> )
+
+
+        }
 
     }
     return (

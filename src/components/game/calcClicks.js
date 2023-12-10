@@ -1,7 +1,9 @@
 function setNumberClicks(arr) {
-    //[
-    // [],[],[]
-    //     ]
+    // [
+    //    {index:45676 , trObj[{numberClicks:3456 , ... }]},
+    //    {},
+    //    ...
+    // ]
     
     arr.forEach(element => {
         // console.log(element);

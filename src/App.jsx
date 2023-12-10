@@ -7,6 +7,7 @@ import { Logout } from './components/Logout'
 import { Register } from './components/register/Register'
 import { PlayGame } from './components/game/PlayGame'
 import { Table } from './components/table/Table'
+
 function App() {
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/play-game' element={<PlayGame />} />
           <Route path='/table/:number' element={<Table />} />
+          
         </Routes>
       </BrowserRouter>
     </>

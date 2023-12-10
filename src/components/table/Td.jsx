@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "./Button"
-export const Td = ({ btnObj, reset ,arr}) => {
+export const Td = ({ btnObj, arr}) => {
     //    console.log(btnObj);//trObj
+    useEffect(() => {
+        console.log('test UseEffect () from Td  !');
+    })
 
     return (
         <>
@@ -12,7 +15,7 @@ export const Td = ({ btnObj, reset ,arr}) => {
                         
                         return (
                             
-                                <Button key={btn.keyIndex} e={btn} reset={reset} arr={arr}/>
+                                <Button key={btn.keyIndex} e={btn} arr={arr}/>
                             
                         )
                     })
